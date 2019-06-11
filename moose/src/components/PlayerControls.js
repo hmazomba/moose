@@ -5,7 +5,7 @@ import{faPause, faPlay, faStepBackward, faStepForward} from "@fortawesome/free-s
 import useMusicPlayer from './useMusicPlayer';
 
 const Controls = () => {
-    const {isPlaying, currentTrackName, togglePlay, playPreviousTrack, playNextTrack} = useMusicPlayer();
+    const {isPlaying, currentTrackName, togglePlay, playPreviousTrack, playNextTrack, duration} = useMusicPlayer();
     return (
         <>
         <div className="box controls has-background-grey-darks">
@@ -22,6 +22,9 @@ const Controls = () => {
                 <button className="button has-text-light has-background-grey-dark" onClick={playNextTrack} disabled={!currentTrackName}>
                     <FontAwesomeIcon icon={faStepForward}/>
                 </button>
+                <div className="song-duration">
+                    {duration}
+                </div>
             </div>
         </div>
             

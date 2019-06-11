@@ -7,7 +7,7 @@ import {faPlay, faPause} from "@fortawesome/free-solid-svg-icons";
 import useMusicPlayer from "./useMusicPlayer";
 
 const TrackList = () => {
-    const {trackList, currentTrackName, playTrack, isPlaying} = useMusicPlayer();
+    const {trackList, currentTrackName, playTrack, isPlaying,} = useMusicPlayer();
     return(
         <>
         {trackList.map((track, index)=> (
@@ -18,7 +18,7 @@ const TrackList = () => {
 
                 <div className="song-title">
                     {track.name}
-                </div>
+                </div>                
             </div>
         ))}
         </>

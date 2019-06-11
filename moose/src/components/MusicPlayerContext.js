@@ -23,6 +23,7 @@ const MusicPlayerProvider = (props) => {
             },
         ],
         currentTrackIndex:null,
+        duration:null,
         isPlaying: false,
     });
     return (

@@ -6,6 +6,7 @@ const useMusicPlayer =() => {
 
     function playTrack(index)
     {
+        state.duration = state.audioPlayer.duration / 60;
         if(index === state.currentTrackIndex)
         {
             togglePlay();
@@ -43,6 +44,7 @@ const useMusicPlayer =() => {
         currentTrackName: state.currentTrackIndex !== null && state.tracks[state.currentTrackIndex].name,
         trackList: state.tracks,
         isPlaying: state.isPlaying,
+        duration: state.audioPlayer.duration / 60,
         playPreviousTrack,
         playNextTrack,
     }
